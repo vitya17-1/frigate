@@ -5,7 +5,7 @@ import { fleet } from '../data'
 import type { FleetType } from '../types'
 import { SectionHeading } from './SectionHeading'
 
-const filters: FleetType[] = ['Все', 'Спецтехника', 'Самосвалы', 'Грузовые']
+const filters: FleetType[] = ['Все', 'Спецтехника', 'Самосвалы']
 
 export function FleetSection() {
   const [active, setActive] = useState<FleetType>('Все')

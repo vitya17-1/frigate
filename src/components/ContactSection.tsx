@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react'
 import { ArrowUpRight, CheckCircle2, Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-const address = 'Волгоград, Портовская ул., 15, территория Рабочий посёлок Горьковский'
+const address = 'Волгоград, Портовская ул. 15, п. Горьковский'
 const mapUrl = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(address)}&z=16`
 const routeUrl = `https://yandex.ru/maps/?text=${encodeURIComponent(address)}`
 
@@ -29,6 +29,13 @@ export function ContactSection(){
     <div className="relative h-[360px] overflow-hidden border-y border-white/15 bg-[#17191a]">
       <iframe title="Фрегат-Юг на карте" src={mapUrl} className="absolute inset-0 h-full w-full border-0 grayscale-[.75] contrast-125" loading="lazy" allowFullScreen />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/25 via-transparent to-ink/20" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-full">
+        <motion.div initial={{opacity:0,y:12,scale:.9}} whileInView={{opacity:1,y:0,scale:1}} viewport={{once:true}} className="flex flex-col items-center drop-shadow-2xl">
+          <div className="mb-2 whitespace-nowrap border border-white/15 bg-ink px-4 py-3 text-left shadow-xl"><strong className="block font-display text-xs uppercase text-white">Фрегат-Юг</strong><span className="mt-1 block text-[9px] text-white/55">Портовская ул. 15</span></div>
+          <div className="grid size-12 place-items-center rounded-full border-4 border-white bg-orange shadow-[0_0_0_10px_rgba(255,90,31,.22)]"><MapPin className="size-6 text-white" fill="currentColor" /></div>
+          <span className="h-5 w-1 bg-orange shadow-lg" />
+        </motion.div>
+      </div>
       <a href={routeUrl} target="_blank" rel="noreferrer" className="absolute bottom-5 left-5 bg-orange px-5 py-4 text-[10px] font-bold uppercase tracking-[.14em] shadow-xl md:left-12">Построить маршрут</a>
     </div>
     <div className="container-pad flex flex-col gap-5 py-7 text-[9px] uppercase tracking-[.16em] text-white/55 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 ООО «ФРЕГАТ-ЮГ»</span><span>ИНН 3445124197 · ОГРН 1123460002412</span></div>
