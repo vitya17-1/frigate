@@ -1,0 +1,2 @@
+import { motion } from 'framer-motion'
+export function SectionHeading({index,label,title,copy}:{index:string;label:string;title:string;copy?:string}){return <motion.div initial={{opacity:0,y:28}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.3}} transition={{duration:.65}} className="mb-12 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-end"><div><div className="eyebrow">{index} / {label}</div><h2 className="section-title">{title}</h2></div>{copy&&<p className="text-sm leading-7 text-white/50 lg:text-base">{copy}</p>}</motion.div>}

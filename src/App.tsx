@@ -1,0 +1,12 @@
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
+import { ServicesSection } from './components/ServicesSection'
+import { FleetSection } from './components/FleetSection'
+import { ProcessSection } from './components/ProcessSection'
+import { PricingSection } from './components/PricingSection'
+import { StatsSection } from './components/StatsSection'
+import { ReviewsSection } from './components/ReviewsSection'
+import { ContactSection } from './components/ContactSection'
+import { ScrollProgress } from './components/ScrollProgress'
+import { AnimatedBackground } from './components/AnimatedBackground'
+export default function App(){return <main className="overflow-clip bg-ink text-cream"><ScrollProgress/><AnimatedBackground/><Header/><Hero/><ServicesSection/><FleetSection/><ProcessSection/><PricingSection/><StatsSection/><ReviewsSection/><ContactSection/></main>}
