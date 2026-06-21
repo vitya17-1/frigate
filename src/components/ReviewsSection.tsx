@@ -1,3 +1,12 @@
-import { motion } from 'framer-motion';import { Quote } from 'lucide-react';import { SectionHeading } from './SectionHeading'
-const reviews=[['«Девелопмент Юг»','Алексей М., руководитель участка','За два дня вывезли объём, на который другие закладывали неделю. Диспетчер всегда был на связи, машины приходили по слотам.'],['СК «Монолит»','Ирина К., снабжение','Подобрали экскаватор под сложный подъезд и сразу посчитали смену. Без сюрпризов в актах — редкая и очень ценная история.'],['Частный заказчик','Денис Р., Краснодар','Заказал бункер и вывоз после ремонта. Привезли вечером, забрали точно по звонку. Быстро и по-человечески.']]
-export function ReviewsSection(){return <section className="relative z-10 border-y border-line bg-[#0d0f10] py-24 lg:py-36"><div className="container-pad"><SectionHeading index="06" label="опыт клиентов" title="Нас оценивают по работе на объекте"/><div className="grid gap-4 lg:grid-cols-3">{reviews.map(([co,who,text],i)=><motion.article initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.1}} key={co} className="card flex min-h-[320px] flex-col p-7"><Quote className="size-9 text-orange"/><p className="my-8 flex-1 text-base leading-8 text-white/65">{text}</p><div className="border-t border-line pt-5"><strong className="block text-xs uppercase tracking-wider">{co}</strong><span className="mt-1 block text-[10px] text-white/35">{who}</span></div></motion.article>)}</div></div></section>}
+import { motion } from 'framer-motion'
+import { BadgeCheck, Factory, FileCheck2, Route } from 'lucide-react'
+import { SectionHeading } from './SectionHeading'
+
+const reasons = [
+  {icon:BadgeCheck,title:'Свой парк',text:'Компания не берёт технику в субаренду и контролирует её техническое состояние.'},
+  {icon:Factory,title:'Своё производство',text:'Бункеры-накопители и жилые модули производятся компанией под задачи заказчика.'},
+  {icon:Route,title:'Широкая география',text:'Перевозки по Волгограду, области, Южному федеральному округу и за его пределами.'},
+  {icon:FileCheck2,title:'Официальная работа',text:'Договор, согласованные условия и комплект документов для бизнеса.'}
+]
+
+export function ReviewsSection(){return <section className="relative z-10 border-y border-line bg-[#0d0f10] py-24 lg:py-36"><div className="container-pad"><SectionHeading index="06" label="почему мы" title="Надёжность, которую можно проверить" copy="Вместо вымышленных отзывов — конкретные свойства бизнеса, важные при выборе подрядчика."/><div className="grid sm:grid-cols-2 lg:grid-cols-4">{reasons.map((item,index)=>{const Icon=item.icon;return <motion.article initial={{opacity:0,y:25}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:index*.08}} key={item.title} className="border border-line p-6"><Icon className="mb-12 size-7 text-orange"/><h3 className="font-display text-lg uppercase">{item.title}</h3><p className="mt-4 text-sm leading-7 text-white/45">{item.text}</p></motion.article>})}</div></div></section>}

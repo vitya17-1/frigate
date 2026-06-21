@@ -7,6 +7,7 @@ import { PricingSection } from './components/PricingSection'
 import { StatsSection } from './components/StatsSection'
 import { ReviewsSection } from './components/ReviewsSection'
 import { ContactSection } from './components/ContactSection'
+import { CasesSection } from './components/CasesSection'
 import { ScrollProgress } from './components/ScrollProgress'
 import { AnimatedBackground } from './components/AnimatedBackground'
-export default function App(){return <main className="overflow-clip bg-ink text-cream"><ScrollProgress/><AnimatedBackground/><Header/><Hero/><ServicesSection/><FleetSection/><ProcessSection/><PricingSection/><StatsSection/><ReviewsSection/><ContactSection/></main>}
+export default function App(){return <main className="overflow-clip bg-ink text-cream"><ScrollProgress/><AnimatedBackground/><Header/><Hero/><ServicesSection/><FleetSection/><ProcessSection/><PricingSection/><StatsSection/><CasesSection/><ReviewsSection/><ContactSection/></main>}
