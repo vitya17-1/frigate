@@ -10,4 +10,5 @@ import { ContactSection } from './components/ContactSection'
 import { CasesSection } from './components/CasesSection'
 import { ScrollProgress } from './components/ScrollProgress'
 import { AnimatedBackground } from './components/AnimatedBackground'
-export default function App(){return <main className="overflow-clip bg-ink text-cream"><ScrollProgress/><AnimatedBackground/><Header/><Hero/><ServicesSection/><FleetSection/><ProcessSection/><PricingSection/><StatsSection/><CasesSection/><ReviewsSection/><ContactSection/></main>}
+import { MobileActionBar } from './components/MobileActionBar'
+export default function App(){return <main className="overflow-clip bg-ink pb-20 text-cream md:pb-0"><ScrollProgress/><AnimatedBackground/><Header/><Hero/><ServicesSection/><FleetSection/><ProcessSection/><PricingSection/><StatsSection/><CasesSection/><ReviewsSection/><ContactSection/><MobileActionBar/></main>}

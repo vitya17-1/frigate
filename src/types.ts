@@ -7,4 +7,7 @@ export interface FleetItem {
   price: string
   code: string
   image: string
+  availability: string
+  useCase: string
+  specs: Array<{ label: string; value: string }>
 }

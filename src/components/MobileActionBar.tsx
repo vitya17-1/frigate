@@ -1,0 +1,4 @@
+import { Calculator, Phone } from 'lucide-react'
+import { motion } from 'framer-motion'
+
+export function MobileActionBar(){return <motion.div initial={{y:80}} animate={{y:0}} transition={{delay:1,duration:.6,ease:[.22,1,.36,1]}} className="fixed inset-x-3 bottom-3 z-[70] grid grid-cols-[.85fr_1.15fr] overflow-hidden border border-white/10 bg-ink/95 shadow-2xl backdrop-blur-xl md:hidden"><a href="tel:+79371012777" className="flex items-center justify-center gap-2 border-r border-white/10 px-3 py-4 text-[10px] font-bold uppercase tracking-wider text-white/70"><Phone className="size-4 text-orange"/>Позвонить</a><a href="#contact" className="cta-primary flex items-center justify-center gap-2 bg-orange px-3 py-4 text-[10px] font-bold uppercase tracking-wider"><Calculator className="size-4"/>Рассчитать</a></motion.div>}
